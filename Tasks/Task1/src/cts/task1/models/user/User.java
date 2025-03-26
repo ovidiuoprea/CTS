@@ -1,13 +1,14 @@
 package cts.task1.models.user;
 
 import cts.task1.interfaces.ITaskViewable;
+import cts.task1.interfaces.ITaskVisibility;
 import cts.task1.interfaces.IUser;
 import cts.task1.models.Task;
 import cts.task1.models.TaskManager;
 
 import java.util.List;
 
-public abstract class User implements IUser, ITaskViewable {
+public abstract class User implements IUser, ITaskViewable, ITaskVisibility {
     private String name;
 
     private TaskManager taskManager = TaskManager.getInstance();
@@ -36,7 +37,7 @@ public abstract class User implements IUser, ITaskViewable {
     }
 
     @Override
-    public void changeTaskVisibility(Task task, Boolean isVisible) {
+    public void updateTaskVisibility(Task task, Boolean isVisible) {
         task.setVisible(isVisible);
     }
 }
