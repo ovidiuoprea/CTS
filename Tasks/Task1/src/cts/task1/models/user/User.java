@@ -1,14 +1,14 @@
 package cts.task1.models.user;
 
 import cts.task1.interfaces.task.ITaskViewable;
-import cts.task1.interfaces.task.ITaskVisibility;
+import cts.task1.interfaces.task.ITaskVisibilityUpdateable;
 import cts.task1.interfaces.IUser;
 import cts.task1.models.Task;
 import cts.task1.models.TaskManager;
 
 import java.util.List;
 
-public abstract class User implements IUser, ITaskViewable, ITaskVisibility {
+public abstract class User implements IUser, ITaskViewable, ITaskVisibilityUpdateable {
     private String name;
 
     private TaskManager taskManager = TaskManager.getInstance();
