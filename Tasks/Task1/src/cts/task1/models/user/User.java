@@ -11,7 +11,7 @@ public abstract class User implements IUser {
     }
 
     @Override
-    public Task createTask(String name, String description) {
-        return new Task(name, description);
+    public Task createTask(String name, String description, Boolean isVisible) {
+        return new Task(name, description, isVisible);
     }
 }
