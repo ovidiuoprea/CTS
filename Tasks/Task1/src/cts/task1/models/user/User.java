@@ -1,7 +1,7 @@
 package cts.task1.models.user;
 
-import cts.task1.interfaces.ITaskViewable;
-import cts.task1.interfaces.ITaskVisibility;
+import cts.task1.interfaces.task.ITaskViewable;
+import cts.task1.interfaces.task.ITaskVisibility;
 import cts.task1.interfaces.IUser;
 import cts.task1.models.Task;
 import cts.task1.models.TaskManager;

@@ -1,4 +1,4 @@
-package cts.task1.interfaces;
+package cts.task1.interfaces.task;
 
 import cts.task1.models.Task;
 
