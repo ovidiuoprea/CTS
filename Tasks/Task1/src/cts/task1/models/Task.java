@@ -25,6 +25,10 @@ public class Task {
         return isVisible;
     }
 
+    public void setVisible(Boolean visible) {
+        isVisible = visible;
+    }
+
     @Override
     public String toString() {
         return "Task{" +

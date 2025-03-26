@@ -34,4 +34,9 @@ public abstract class User implements IUser, ITaskViewable {
             System.out.println(task);
         }
     }
+
+    @Override
+    public void changeTaskVisibility(Task task, Boolean isVisible) {
+        task.setVisible(isVisible);
+    }
 }

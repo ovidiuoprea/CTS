@@ -14,6 +14,8 @@ public class Main {
         Task task2 = admin.createTask("Task2", "Second task created", true);
         Task task3 = admin.createTask("Task3", "Third task created", false);
 
+        regular.changeTaskVisibility(task3, true);
+
         System.out.println("\n\nAdmin view tasks:\n");
         admin.viewTasks();
 
