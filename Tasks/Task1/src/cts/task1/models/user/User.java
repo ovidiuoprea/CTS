@@ -16,9 +16,13 @@ public abstract class User implements IUser, ITaskViewable {
         this.name = name;
     }
 
+    public String getName() {
+        return name;
+    }
+
     @Override
     public Task createTask(String name, String description, Boolean isVisible) {
-        Task task = new Task(name, description, isVisible);
+        Task task = new Task(name, description, isVisible, this);
         taskManager.addTask(task);
         return task;
     }

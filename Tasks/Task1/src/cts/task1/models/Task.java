@@ -1,15 +1,19 @@
 package cts.task1.models;
 
+import cts.task1.models.user.User;
+
 public class Task {
     private String title;
     private String description;
     private static Integer id = 0;
     Boolean isVisible;
+    User owner;
 
-    public Task(String title, String description, boolean isVisible) {
+    public Task(String title, String description, boolean isVisible, User owner) {
         this.title = title;
         this.description = description;
         this.isVisible = isVisible;
+        this.owner = owner;
         id++;
     }
 
@@ -27,6 +31,7 @@ public class Task {
                 "title='" + title + '\'' +
                 ", description='" + description + '\'' +
                 ", isVisible=" + isVisible +
+                ", owner=" + owner.getName() +
                 '}';
     }
 }
