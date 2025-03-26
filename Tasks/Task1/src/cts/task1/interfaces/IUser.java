@@ -1,5 +1,7 @@
 package cts.task1.interfaces;
 
+import cts.task1.models.Task;
+
 public interface IUser {
-    void createTask();
+    Task createTask(String name, String description);
 }
