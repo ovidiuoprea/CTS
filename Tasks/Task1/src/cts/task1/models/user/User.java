@@ -1,4 +1,4 @@
-package cts.task1.models;
+package cts.task1.models.user;
 
 public abstract class User {
     private String name;
