@@ -30,7 +30,7 @@ public abstract class User implements IUser, ITaskViewable, ITaskVisibilityUpdat
 
     @Override
     public void viewTasks() {
-        List<Task> visibleTasks = taskManager.getTasks().stream().filter((task -> task.getVisible() == true)).toList();
+        List<Task> visibleTasks = taskManager.getTasks().stream().filter(Task::getVisible).toList();
         for(Task task : visibleTasks) {
             System.out.println(task);
         }
@@ -39,5 +39,20 @@ public abstract class User implements IUser, ITaskViewable, ITaskVisibilityUpdat
     @Override
     public void updateTaskVisibility(Task task, Boolean isVisible) {
         task.setVisible(isVisible);
+    }
+
+    @Override
+    public void filterTaskByTitle(String title) {
+        List<Task> filteredTasks = taskManager
+                .getTasks()
+                .stream()
+                .filter(
+                    task -> task.getTitle().toLowerCase().contains(title.toLowerCase().trim())
+                )
+                .toList();
+
+        for(Task task : filteredTasks) {
+            System.out.println(task);
+        }
     }
 }

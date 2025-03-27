@@ -24,5 +24,8 @@ public class Main {
 
         System.out.println("\n\nRegular view tasks:\n");
         regular.viewTasks();
+
+        System.out.println("\n\nFiltered tasks by title ('Another'):\n");
+        regular.filterTaskByTitle("another          ");
     }
 }
