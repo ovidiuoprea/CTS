@@ -15,6 +15,7 @@ public class Main {
         Task task3 = admin.createTask("Task3", "Third task created", false);
 
         regular.updateTaskVisibility(task3, true);
+        ((Admin) admin).deleteTask(task3);
 
         ((Admin) admin).updateTitle(task1, "Another title");
 
