@@ -1,12 +1,13 @@
 package cts.task1.models.user;
 
 import cts.task1.interfaces.task.ITaskDeletable;
+import cts.task1.interfaces.task.ITaskDescriptionUpdateable;
 import cts.task1.interfaces.task.ITaskTitleUpdateable;
 import cts.task1.interfaces.task.ITaskViewable;
 import cts.task1.models.Task;
 import cts.task1.models.TaskManager;
 
-public class Admin extends User implements ITaskViewable, ITaskTitleUpdateable, ITaskDeletable {
+public class Admin extends User implements ITaskViewable, ITaskTitleUpdateable, ITaskDescriptionUpdateable, ITaskDeletable {
     private TaskManager taskManager = TaskManager.getInstance();
     public Admin(String name) {
         super(name);
