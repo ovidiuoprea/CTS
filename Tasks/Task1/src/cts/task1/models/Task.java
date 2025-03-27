@@ -29,6 +29,10 @@ public class Task {
         isVisible = visible;
     }
 
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
     @Override
     public String toString() {
         return "Task{" +
