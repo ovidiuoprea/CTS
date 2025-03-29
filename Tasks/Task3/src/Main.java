@@ -86,7 +86,7 @@ public class Main {
             System.out.println(sauce);
         }
 
-        Menu mainMenu = new MainMenu(Menu.MAIN_MENU_OPTIONS);
+        Menu mainMenu = new MainMenu(Menu.MAIN_MENU_OPTIONS, null);
         mainMenu.show();
     }
 }
