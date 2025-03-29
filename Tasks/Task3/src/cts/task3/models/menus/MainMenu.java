@@ -2,6 +2,7 @@ package cts.task3.models.menus;
 
 import cts.task3.interfaces.IMenu;
 import cts.task3.models.constants.MenuOptionLabels;
+import cts.task3.models.constants.MainMenuOptionValues;
 
 import java.util.List;
 
@@ -28,13 +29,13 @@ public class MainMenu extends Menu implements IMenu {
     @Override
     public void handleUserInput(Integer choice) {
         switch(choice) {
-            case 1:
+            case MainMenuOptionValues.KEBAP_MENU:
                 kebapMenu.show();
                 break;
-            case 2:
+            case MainMenuOptionValues.SAUCE_MENU:
                 sauceMenu.show();
                 break;
-            case 0:
+            case MainMenuOptionValues.EXIT:
                 break;
             default:
                 System.out.println("Invalid option, please try again.");
