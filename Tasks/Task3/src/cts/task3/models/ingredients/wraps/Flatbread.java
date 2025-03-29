@@ -1,4 +1,4 @@
-package cts.task3.models.ingredients.wrap;
+package cts.task3.models.ingredients.wraps;
 
 public class Flatbread extends Wrap{
     private static final Integer FLATBREAD_CALORIES = 234;

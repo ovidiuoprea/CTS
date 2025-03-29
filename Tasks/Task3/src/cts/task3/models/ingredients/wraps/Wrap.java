@@ -1,4 +1,4 @@
-package cts.task3.models.ingredients.wrap;
+package cts.task3.models.ingredients.wraps;
 
 import cts.task3.models.ingredients.Ingredient;
 

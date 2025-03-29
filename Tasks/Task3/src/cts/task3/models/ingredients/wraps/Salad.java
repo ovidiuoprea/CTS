@@ -1,4 +1,4 @@
-package cts.task3.models.ingredients.wrap;
+package cts.task3.models.ingredients.wraps;
 
 public class Salad extends Wrap{
     private static final Integer SALAD_CALORIES = 6;
