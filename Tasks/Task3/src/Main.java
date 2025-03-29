@@ -76,5 +76,12 @@ public class Main {
 
         List<Sauce> sauces = Stream.of(ketchup, chilli, mayonnaise, spicyMayonnaise).toList();
         SauceSerializer.write(sauces, "output/sauces.txt");
+        SauceSerializer.read("output/sauces.txt");
+
+        List<Sauce> readSauces = SauceSerializer.read("output/sauces.txt");
+        System.out.println("Read sauces: ");
+        for(Sauce sauce: readSauces) {
+            System.out.println(sauce);
+        }
     }
 }
