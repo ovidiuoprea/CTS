@@ -14,6 +14,7 @@ import cts.task3.models.ingredients.proteins.Lamb;
 import cts.task3.models.ingredients.proteins.Protein;
 import cts.task3.models.ingredients.sauces.Sauce;
 import cts.task3.models.ingredients.wraps.Wrap;
+import cts.task3.models.singleton.KebapManager;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -39,18 +40,20 @@ public class KebapMenu extends Menu implements IMenu {
                 // TODO
                 break;
             case KebapMenuOptionValues.SHOW_ALL:
-                // TODO
+                KebapManager kebapManager = KebapManager.getInstance();
+                kebapManager.showAllKebaps();
                 break;
             case KebapMenuOptionValues.FILTER:
                 // TODO
                 break;
             case KebapMenuOptionValues.BACK:
                 parentMenu.show();
-                break;
+                return;
             default:
                 this.show();
                 break;
         }
+        this.show();
     }
 
     private void showCreateKebapSubmenu() {
@@ -76,7 +79,10 @@ public class KebapMenu extends Menu implements IMenu {
                 .setPickle(pickle)
                 .setWrap(wrap)
                 .build();
-        
+
+        KebapManager kebapManager = KebapManager.getInstance();
+        kebapManager.addKebap(kebap);
     }
+
 }
 
