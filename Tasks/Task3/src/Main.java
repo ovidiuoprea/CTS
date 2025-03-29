@@ -18,6 +18,7 @@ import cts.task3.models.ingredients.wraps.Flatbread;
 import cts.task3.models.ingredients.sauces.Sauce;
 import cts.task3.models.menus.MainMenu;
 import cts.task3.models.menus.Menu;
+import cts.task3.models.singleton.SauceManager;
 import cts.task3.serializers.SauceSerializer;
 
 import java.util.List;
@@ -84,6 +85,9 @@ public class Main {
         for(Sauce sauce: readSauces) {
             System.out.println(sauce);
         }
+
+        SauceManager sauceManager = SauceManager.getInstance();
+        sauceManager.setSauces(readSauces);
 
         Menu mainMenu = new MainMenu(MenuOptionLabels.MAIN_MENU_OPTIONS_LABELS, null);
         mainMenu.show();

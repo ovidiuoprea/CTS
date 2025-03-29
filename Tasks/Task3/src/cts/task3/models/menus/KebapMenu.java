@@ -2,6 +2,7 @@ package cts.task3.models.menus;
 
 import cts.task3.interfaces.IMenu;
 import cts.task3.models.Kebap;
+import cts.task3.models.builders.KebapBuilder;
 import cts.task3.models.constants.KebapMenuOptionValues;
 import cts.task3.models.ingredients.carbohydrates.Carbohydrate;
 import cts.task3.models.ingredients.fibers.Fiber;
@@ -11,8 +12,10 @@ import cts.task3.models.ingredients.proteins.Chicken;
 import cts.task3.models.ingredients.proteins.Falafel;
 import cts.task3.models.ingredients.proteins.Lamb;
 import cts.task3.models.ingredients.proteins.Protein;
+import cts.task3.models.ingredients.sauces.Sauce;
 import cts.task3.models.ingredients.wraps.Wrap;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
@@ -54,12 +57,26 @@ public class KebapMenu extends Menu implements IMenu {
         Scanner in = new Scanner(System.in);
         Protein protein = Protein.getProteinFromUserInput(in);
         Carbohydrate carbohydrate = Carbohydrate.getCarbohydrateFromUserInput(in);
+
+        List<Sauce> sauces = new ArrayList<>();
+        for(int i=0; i<Kebap.SAUCES_COUNT_LIMIT; i++) {
+            Sauce sauce = Sauce.getSauceFromUserInput(in);
+            sauces.add(sauce);
+        }
+
         Fiber fiber = Fiber.getFiberFromUserInput(in);
         Healthy healthy = Healthy.getHealthyFromUserInput(in);
         Pickle pickle = Pickle.getPickleFromUserInput(in);
         Wrap wrap = Wrap.getWrapFromUserInput(in);
 
-        // TODO: Sauces, needs SauceManager
+        Kebap kebap = new KebapBuilder(protein, carbohydrate)
+                .setSauces(sauces)
+                .setFiber(fiber)
+                .setHealthy(healthy)
+                .setPickle(pickle)
+                .setWrap(wrap)
+                .build();
+        
     }
 }
 

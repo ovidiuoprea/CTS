@@ -1,6 +1,10 @@
 package cts.task3.models.ingredients.sauces;
 
 import cts.task3.models.ingredients.Ingredient;
+import cts.task3.models.singleton.SauceManager;
+
+import java.util.List;
+import java.util.Scanner;
 
 public abstract class Sauce extends Ingredient {
     protected Boolean isSpicy;
@@ -18,6 +22,18 @@ public abstract class Sauce extends Ingredient {
 
     public String getName() {
         return name;
+    }
+
+
+
+    public static Sauce getSauceFromUserInput(Scanner in) {
+        SauceManager.showAllSauces();
+        int choice = in.nextInt();
+        Sauce sauce = SauceManager
+                .getInstance()
+                .getSauces()
+                .get(choice);
+        return sauce;
     }
 
     @Override
