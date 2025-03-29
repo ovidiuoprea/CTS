@@ -36,15 +36,22 @@ public abstract class Menu implements IMenu {
 
     @Override
     public void show() {
-        System.out.println("Welcome to \"Kebap nu cu de toate... ci doar cu ce trebuie... SRL\". How can we help?");
+        System.out.println("Welcome to \"Kebap nu cu de toate... ci doar cu ce trebuie... SRL\".\nHow can we help?");
         for(String option: options) {
             System.out.println(
+                "\t" +
                 (options.indexOf(option) + 1) +
                 ". " +
                 option
             );
         }
-        System.out.println("0. Go back / exit");
+        if(this instanceof MainMenu) {
+            System.out.println("\t0. Exit");
+        }
+        else {
+            System.out.println("\t0. Go back");
+        }
+        
         System.out.println("Choose one: ");
         Scanner in = new Scanner(System.in);
         Integer choice = in.nextInt();
