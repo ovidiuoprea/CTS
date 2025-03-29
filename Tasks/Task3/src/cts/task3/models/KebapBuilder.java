@@ -1,6 +1,7 @@
 package cts.task3.models;
 
 import cts.task3.exceptions.SauceBeforeProteinException;
+import cts.task3.exceptions.TooManySaucesException;
 import cts.task3.interfaces.IBuilder;
 import cts.task3.models.ingredients.carbohydrates.Carbohydrate;
 import cts.task3.models.ingredients.fibers.Fiber;
@@ -22,6 +23,9 @@ public class KebapBuilder implements IBuilder {
     public KebapBuilder setSauces(List<Sauce> sauces) {
         if(kebap.getProtein() == null) {
             throw new SauceBeforeProteinException();
+        }
+        if(sauces.size() >= Kebap.SAUCES_COUNT_LIMIT) {
+            throw new TooManySaucesException();
         }
         kebap.setSauces(sauces);
         return this;
