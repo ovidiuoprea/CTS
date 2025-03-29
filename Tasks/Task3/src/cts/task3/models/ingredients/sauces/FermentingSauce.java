@@ -11,4 +11,14 @@ public class FermentingSauce extends Sauce {
     public Integer getExpiryHours() {
         return expiryHours;
     }
+
+    @Override
+    public String toString() {
+        return "FermentingSauce{" +
+                "expiryHours=" + expiryHours +
+                ", isSpicy=" + isSpicy +
+                ", name='" + name + '\'' +
+                ", calories=" + calories +
+                '}';
+    }
 }
