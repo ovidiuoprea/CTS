@@ -1,7 +1,7 @@
-package cts.task3.models;
+package cts.task3.models.ingredients;
 
 public abstract class Ingredient {
-    private Integer calories;
+    protected Integer calories;
 
     public Ingredient(Integer calories) {
         this.calories = calories;
