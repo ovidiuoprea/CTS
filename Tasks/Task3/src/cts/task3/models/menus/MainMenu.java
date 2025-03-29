@@ -11,8 +11,8 @@ public class MainMenu extends Menu implements IMenu {
 
     public MainMenu(List<String> options, IMenu parentMenu) {
         super(options, parentMenu);
-        kebapMenu = new KebapMenu(Menu.KEBAP_MENU_OPTIONS, this);
-        sauceMenu = new SauceMenu(Menu.SAUCE_MENU_OPTIONS, this);
+        kebapMenu = new KebapMenu(Menu.KEBAP_MENU_OPTIONS_LABELS, this);
+        sauceMenu = new SauceMenu(Menu.SAUCE_MENU_OPTIONS_LABELS, this);
     }
 
     public List<String> getOptions() {

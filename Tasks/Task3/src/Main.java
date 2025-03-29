@@ -19,7 +19,6 @@ import cts.task3.models.menus.MainMenu;
 import cts.task3.models.menus.Menu;
 import cts.task3.serializers.SauceSerializer;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
@@ -81,12 +80,11 @@ public class Main {
         SauceSerializer.read("output/sauces.txt");
 
         List<Sauce> readSauces = SauceSerializer.read("output/sauces.txt");
-        System.out.println("Read sauces: ");
         for(Sauce sauce: readSauces) {
             System.out.println(sauce);
         }
 
-        Menu mainMenu = new MainMenu(Menu.MAIN_MENU_OPTIONS, null);
+        Menu mainMenu = new MainMenu(Menu.MAIN_MENU_OPTIONS_LABELS, null);
         mainMenu.show();
     }
 }

@@ -2,29 +2,27 @@ package cts.task3.models.menus;
 
 import cts.task3.interfaces.IMenu;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
-import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 public abstract class Menu implements IMenu {
     IMenu parentMenu;
     protected List<String> options;
 
-    public static final List<String> MAIN_MENU_OPTIONS = Stream.of(
+    public static final List<String> MAIN_MENU_OPTIONS_LABELS = Stream.of(
             "Kebap menu",
             "Sauce menu"
     ).toList();
 
-    public static final List<String> KEBAP_MENU_OPTIONS = Stream.of(
+    public static final List<String> KEBAP_MENU_OPTIONS_LABELS = Stream.of(
             "Create kebap",
             "Delete kebap",
             "Show all kebaps",
             "Filter kebaps"
     ).toList();
 
-    public static final List<String> SAUCE_MENU_OPTIONS = Stream.of(
+    public static final List<String> SAUCE_MENU_OPTIONS_LABELS = Stream.of(
             "Create sauce",
             "Delete sauce",
             "Save sauces to file",
