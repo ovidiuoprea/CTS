@@ -15,6 +15,8 @@ import cts.task3.models.ingredients.sauces.FermentingSauce;
 import cts.task3.models.ingredients.sauces.NonFermentingSauce;
 import cts.task3.models.ingredients.wraps.Flatbread;
 import cts.task3.models.ingredients.sauces.Sauce;
+import cts.task3.models.menus.MainMenu;
+import cts.task3.models.menus.Menu;
 import cts.task3.serializers.SauceSerializer;
 
 import java.util.ArrayList;
@@ -83,5 +85,8 @@ public class Main {
         for(Sauce sauce: readSauces) {
             System.out.println(sauce);
         }
+
+        Menu mainMenu = new MainMenu(Menu.MAIN_MENU_OPTIONS);
+        mainMenu.show();
     }
 }

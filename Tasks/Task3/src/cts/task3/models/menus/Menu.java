@@ -9,10 +9,26 @@ import java.util.stream.Stream;
 
 public abstract class Menu implements IMenu {
     protected List<String> options;
+
     public static List<String> MAIN_MENU_OPTIONS = Stream.of(
             "Kebap menu",
             "Sauce menu"
     ).toList();
+
+    public static List<String> KEBAP_MENU_OPTIONS = Stream.of(
+            "Create kebap",
+            "Delete kebap",
+            "Show all kebaps",
+            "Filter kebaps"
+    ).toList();
+
+    public static List<String> SAUCE_MENU_OPTIONS = Stream.of(
+            "Create sauce",
+            "Delete sauce",
+            "Save sauces to file",
+            "Load sauces from file"
+    ).toList();
+
 
     public Menu(List<String> options) {
         this.options = options;
