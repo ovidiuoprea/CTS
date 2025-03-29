@@ -9,4 +9,12 @@ public abstract class Protein extends Ingredient {
         super(calories);
         this.isVegan = isVegan;
     }
+
+    @Override
+    public String toString() {
+        return "Protein{" +
+                "calories=" + calories +
+                ", isVegan=" + isVegan +
+                '}';
+    }
 }
