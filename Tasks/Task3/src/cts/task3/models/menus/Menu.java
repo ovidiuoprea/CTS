@@ -9,6 +9,7 @@ import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 public abstract class Menu implements IMenu {
+    IMenu parentMenu;
     protected List<String> options;
 
     public static final List<String> MAIN_MENU_OPTIONS = Stream.of(
@@ -30,8 +31,9 @@ public abstract class Menu implements IMenu {
             "Load sauces from file"
     ).toList();
 
-    public Menu(List<String> options) {
+    public Menu(List<String> options, IMenu parentMenu) {
         this.options = options;
+        this.parentMenu = parentMenu;
     }
 
     @Override
