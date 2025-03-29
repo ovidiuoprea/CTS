@@ -12,6 +12,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Kebap {
+    public static final Integer SAUCES_COUNT_LIMIT = 3;
     private Protein protein;
     private Carbohydrate carbohydrate;
     private List<Sauce> sauces = new ArrayList<>();
@@ -23,6 +24,30 @@ public class Kebap {
     public Kebap(Protein protein, Carbohydrate carbohydrate) {
         this.protein = protein;
         this.carbohydrate = carbohydrate;
+    }
+
+    public Protein getProtein() {
+        return protein;
+    }
+
+    public void setSauces(List<Sauce> sauces) {
+        this.sauces = sauces;
+    }
+
+    public void setPickle(Pickle pickle) {
+        this.pickle = pickle;
+    }
+
+    public void setWrap(Wrap wrap) {
+        this.wrap = wrap;
+    }
+
+    public void setFiber(Fiber fiber) {
+        this.fiber = fiber;
+    }
+
+    public void setHealthy(Healthy healthy) {
+        this.healthy = healthy;
     }
 
     @Override
