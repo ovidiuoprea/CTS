@@ -15,8 +15,10 @@ import cts.task3.models.ingredients.sauces.FermentingSauce;
 import cts.task3.models.ingredients.sauces.NonFermentingSauce;
 import cts.task3.models.ingredients.wraps.Flatbread;
 import cts.task3.models.ingredients.sauces.Sauce;
+import cts.task3.serializers.SauceSerializer;
 
 import java.util.ArrayList;
+import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
@@ -71,5 +73,8 @@ public class Main {
         catch (TooManySaucesException exception) {
             System.out.println(exception.getMessage());
         }
+
+        List<Sauce> sauces = Stream.of(ketchup, chilli, mayonnaise, spicyMayonnaise).toList();
+        SauceSerializer.write(sauces, "output/sauces.txt");
     }
 }
