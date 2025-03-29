@@ -12,6 +12,14 @@ public abstract class Sauce extends Ingredient {
         this.isSpicy = isSpicy;
     }
 
+    public Boolean getSpicy() {
+        return isSpicy;
+    }
+
+    public String getName() {
+        return name;
+    }
+
     @Override
     public String toString() {
         return "Sauce{" +

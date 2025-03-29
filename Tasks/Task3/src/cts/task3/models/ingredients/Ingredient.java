@@ -7,6 +7,10 @@ public abstract class Ingredient {
         this.calories = calories;
     }
 
+    public Integer getCalories() {
+        return calories;
+    }
+
     @Override
     public String toString() {
         return "Ingredient{" +

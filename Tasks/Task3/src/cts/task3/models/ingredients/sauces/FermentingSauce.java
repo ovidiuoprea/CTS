@@ -7,4 +7,8 @@ public class FermentingSauce extends Sauce {
         super(calories, name, isSpicy);
         this.expiryHours = expiryHours;
     }
+
+    public Integer getExpiryHours() {
+        return expiryHours;
+    }
 }
