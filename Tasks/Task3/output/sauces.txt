@@ -1,4 +1,4 @@
-Sauce{isSpicy=false, name='Ketcup', calories=300}
-Sauce{isSpicy=true, name='Chilli', calories=200}
-Sauce{isSpicy=false, name='Mayonnaise', calories=360}
-Sauce{isSpicy=true, name='Spicy mayonnaise', calories=365}
+300,Ketcup,false
+200,Chilli,true
+360,Mayonnaise,false,6
+365,Spicy mayonnaise,true,6
