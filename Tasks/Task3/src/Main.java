@@ -2,6 +2,7 @@ import cts.task3.exceptions.SauceBeforeProteinException;
 import cts.task3.exceptions.TooManySaucesException;
 import cts.task3.models.Kebap;
 import cts.task3.models.KebapBuilder;
+import cts.task3.models.constants.MenuOptionLabels;
 import cts.task3.models.ingredients.Ingredient;
 import cts.task3.models.ingredients.carbohydrates.FrenchFries;
 import cts.task3.models.ingredients.carbohydrates.Rice;
@@ -84,7 +85,7 @@ public class Main {
             System.out.println(sauce);
         }
 
-        Menu mainMenu = new MainMenu(Menu.MAIN_MENU_OPTIONS_LABELS, null);
+        Menu mainMenu = new MainMenu(MenuOptionLabels.MAIN_MENU_OPTIONS_LABELS, null);
         mainMenu.show();
     }
 }
