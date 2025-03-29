@@ -5,7 +5,7 @@ Versiune JDK folosită: Oracle OpenJDK 22.0.2
 
 ## Tasks
 Reprezintă exerciții pentru activitatea de seminar. Fiecare dintre acestea trebuie să implementeze SOLID.
-Pentru fiecare Task, cerințele se află în directorul <strong>requirements/</strong>
+Pentru fiecare Task, cerințele se află în directorul **`requirements/`**
 
 &emsp; 1. Singleton DP  
 &emsp; 2. Singleton DP  
