@@ -29,8 +29,11 @@ public class MainMenu extends Menu implements IMenu {
                 kebapMenu.show();
             case 2:
                 sauceMenu.show();
+            case 0:
+                break;
             default:
-                super.show();
+                System.out.println("Invalid option, please try again.");
+                this.show();
         }
     }
 }
