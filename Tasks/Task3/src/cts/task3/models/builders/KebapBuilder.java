@@ -25,7 +25,7 @@ public class KebapBuilder implements IBuilder {
         if(kebap.getProtein() == null) {
             throw new SauceBeforeProteinException();
         }
-        if(sauces.size() >= Kebap.SAUCES_COUNT_LIMIT) {
+        if(sauces.size() > Kebap.SAUCES_COUNT_LIMIT) {
             throw new TooManySaucesException();
         }
         kebap.setSauces(sauces);
