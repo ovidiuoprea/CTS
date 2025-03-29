@@ -6,11 +6,13 @@ import java.util.List;
 
 public class MainMenu extends Menu implements IMenu {
 
-    KebapMenu kebapMenu = new KebapMenu(Menu.KEBAP_MENU_OPTIONS);
-    SauceMenu sauceMenu = new SauceMenu(Menu.SAUCE_MENU_OPTIONS);
+    private KebapMenu kebapMenu;
+    private SauceMenu sauceMenu;
 
-    public MainMenu(List<String> options) {
-        super(options);
+    public MainMenu(List<String> options, IMenu parentMenu) {
+        super(options, parentMenu);
+        kebapMenu = new KebapMenu(Menu.KEBAP_MENU_OPTIONS, this);
+        sauceMenu = new SauceMenu(Menu.SAUCE_MENU_OPTIONS, this);
     }
 
     public List<String> getOptions() {
@@ -27,8 +29,10 @@ public class MainMenu extends Menu implements IMenu {
         switch(choice) {
             case 1:
                 kebapMenu.show();
+                break;
             case 2:
                 sauceMenu.show();
+                break;
             case 0:
                 break;
             default:

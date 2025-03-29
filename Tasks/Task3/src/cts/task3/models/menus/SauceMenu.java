@@ -5,8 +5,11 @@ import cts.task3.interfaces.IMenu;
 import java.util.List;
 
 public class SauceMenu extends Menu implements IMenu {
-    public SauceMenu(List<String> options) {
-        super(options);
+    public SauceMenu(List<String> options, IMenu parentMenu) {
+        super(options, parentMenu);
+        if(parentMenu != null) {
+            System.out.println("From the sauce menu, parent menu is not null");
+        }
     }
 
     @Override
@@ -16,6 +19,12 @@ public class SauceMenu extends Menu implements IMenu {
 
     @Override
     public void handleUserInput(Integer userChoice) {
-        super.handleUserInput(userChoice);
+        switch(userChoice) {
+            default:
+                this.show();
+            case 0:
+                parentMenu.show();
+                break;
+        }
     }
 }

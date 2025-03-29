@@ -5,8 +5,8 @@ import cts.task3.interfaces.IMenu;
 import java.util.List;
 
 public class KebapMenu extends Menu implements IMenu {
-    public KebapMenu(List<String> options) {
-        super(options);
+    public KebapMenu(List<String> options, IMenu parentMenu) {
+        super(options, parentMenu);
     }
 
     @Override
@@ -16,7 +16,14 @@ public class KebapMenu extends Menu implements IMenu {
 
     @Override
     public void handleUserInput(Integer userChoice) {
-        super.handleUserInput(userChoice);
+        switch(userChoice) {
+            default:
+                this.show();
+                break;
+            case 0:
+                parentMenu.show();
+                break;
+        }
     }
 }
 
