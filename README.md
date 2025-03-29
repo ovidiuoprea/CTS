@@ -7,8 +7,8 @@ Versiune JDK folosită: Oracle OpenJDK 22.0.2
 Reprezintă exerciții pentru activitatea de seminar. Fiecare dintre acestea trebuie să implementeze SOLID.
 Pentru fiecare Task, cerințele se află în directorul <strong>requirements/</strong>
 
-&emsp; 1. Singleton DP
-&emsp; 2. Singleton DP
+&emsp; 1. Singleton DP  
+&emsp; 2. Singleton DP  
 &emsp; 3. Builder DP
 
 ## Software Quality and Testing 2024–2025
