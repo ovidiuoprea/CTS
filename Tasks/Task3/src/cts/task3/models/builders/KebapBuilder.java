@@ -1,8 +1,9 @@
-package cts.task3.models;
+package cts.task3.models.builders;
 
 import cts.task3.exceptions.SauceBeforeProteinException;
 import cts.task3.exceptions.TooManySaucesException;
 import cts.task3.interfaces.IBuilder;
+import cts.task3.models.Kebap;
 import cts.task3.models.ingredients.carbohydrates.Carbohydrate;
 import cts.task3.models.ingredients.fibers.Fiber;
 import cts.task3.models.ingredients.healthy.Healthy;

@@ -1,7 +1,7 @@
 import cts.task3.exceptions.SauceBeforeProteinException;
 import cts.task3.exceptions.TooManySaucesException;
 import cts.task3.models.Kebap;
-import cts.task3.models.KebapBuilder;
+import cts.task3.models.builders.KebapBuilder;
 import cts.task3.models.constants.MenuOptionLabels;
 import cts.task3.models.ingredients.Ingredient;
 import cts.task3.models.ingredients.carbohydrates.FrenchFries;
