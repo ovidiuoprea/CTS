@@ -24,4 +24,17 @@ public class Kebap {
         this.protein = protein;
         this.carbohydrate = carbohydrate;
     }
+
+    @Override
+    public String toString() {
+        return "Kebap{" +
+                "protein=" + protein +
+                ", carbohydrate=" + carbohydrate +
+                ", sauces=" + sauces +
+                ", pickle=" + pickle +
+                ", wrap=" + wrap +
+                ", fiber=" + fiber +
+                ", healthy=" + healthy +
+                '}';
+    }
 }
