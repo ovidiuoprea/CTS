@@ -5,18 +5,18 @@ import cts.subject1.models.Dish;
 import java.util.ArrayList;
 import java.util.List;
 
-public class SingletonOven {
+public class OvenEager {
 
-    private static final SingletonOven instance = new SingletonOven();
+    private static final OvenEager instance = new OvenEager();
     private int maximumDegrees;
     private List<Dish> waitingList;
 
-    private SingletonOven() {
+    private OvenEager() {
         this.maximumDegrees = 270;
         this.waitingList = new ArrayList<Dish>();
     }
 
-    public static SingletonOven getInstance() {
+    public static OvenEager getInstance() {
         return instance;
     }
 

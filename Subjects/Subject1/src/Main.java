@@ -1,6 +1,6 @@
 import cts.subject1.exceptions.OvenTemperatureExceededException;
 import cts.subject1.models.Dish;
-import cts.subject1.models.singleton.eager.SingletonOven;
+import cts.subject1.models.singleton.eager.OvenEager;
 
 public class Main {
     public static void main(String[] args) {
@@ -15,8 +15,8 @@ public class Main {
         // Requirements 1 & 2:
 
         // Testing if the singleton is implemented correctly:
-        SingletonOven oven1 = SingletonOven.getInstance();
-        SingletonOven oven2 = SingletonOven.getInstance();
+        OvenEager oven1 = OvenEager.getInstance();
+        OvenEager oven2 = OvenEager.getInstance();
 
         if(!oven1.equals(oven2)) {
             throw new RuntimeException("Singleton instances are different!");
