@@ -1,6 +1,8 @@
+import cts.subject1.exceptions.OvenCountLimitExceededException;
 import cts.subject1.exceptions.OvenTemperatureExceededException;
 import cts.subject1.models.Dish;
 import cts.subject1.models.singleton.eager.OvenEager;
+import cts.subject1.models.singleton.registry.Oven;
 
 public class Main {
     public static void main(String[] args) {
@@ -36,7 +38,22 @@ public class Main {
 
         oven1.displayWaitingList();
 
+        // Requirements 3 & 4:
 
+        System.out.println("\nRequirements 3, 4: \n\n");
+        Oven registryOven1 = Oven.getInstance(200, "oven1");
+        Oven registryOven2 = Oven.getInstance(180, "oven2");
+        Oven registryOven3 = Oven.getInstance(400, "oven3");
+        Oven registryOven4 = Oven.getInstance(140, "oven4");
 
+        try {
+            Oven registryOven5 = Oven.getInstance(300, "oven5");
+        }
+        catch (OvenCountLimitExceededException exception) {
+            System.out.println("Cannot create another oven due to: " + exception.getMessage() + "\n");
+        }
+
+        // Testing the singleton registry:
+        Oven registryOvenTest1 = Oven.getInstance(200, "oven1");
     }
 }

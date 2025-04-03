@@ -26,14 +26,27 @@ public class Oven {
     }
 
     public static Oven getInstance(int maximumDegrees, String identifier) {
-        if(instances.size() >= OVEN_COUNT_LIMIT) {
-            throw new OvenCountLimitExceededException();
-        }
         Oven instance = instances.get(identifier);
+
         if(instance == null) {
+            // If adding a new oven will exceed the oven count limit, throw exception
+            if(instances.size() >= OVEN_COUNT_LIMIT) {
+                throw new OvenCountLimitExceededException();
+            }
+
             instance = new Oven(maximumDegrees, identifier);
             instances.put(identifier, instance);
+            System.out.println("Created a new " + instance);
         }
         return instance;
+    }
+
+    @Override
+    public String toString() {
+        return "Oven{" +
+                "maximumDegrees=" + maximumDegrees +
+                ", waitingList=" + waitingList +
+                ", identifier='" + identifier + '\'' +
+                '}';
     }
 }
