@@ -11,6 +11,10 @@ public class Dish {
         this.cookingDegrees = cookingDegrees;
     }
 
+    public int getCookingTime() {
+        return cookingTime;
+    }
+
     @Override
     public String toString() {
         return "Dish{" +
