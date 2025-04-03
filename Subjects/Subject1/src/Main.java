@@ -1,5 +1,13 @@
+import cts.subject1.models.singleton.eager.Dish;
+
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Hello world from the subject 1 module!");
+        Dish pizza = new Dish("Pizza", 25, 200);
+        Dish steak = new Dish("Steak", 18, 180);
+        Dish pie = new Dish("Pie", 40, 130);
+
+        System.out.println(pizza);
+        System.out.println(steak);
+        System.out.println(pie);
     }
 }
