@@ -1,4 +1,4 @@
-import cts.subject1.models.singleton.eager.Dish;
+import cts.subject1.models.Dish;
 
 public class Main {
     public static void main(String[] args) {

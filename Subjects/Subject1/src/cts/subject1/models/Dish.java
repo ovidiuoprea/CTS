@@ -1,4 +1,4 @@
-package cts.subject1.models.singleton.eager;
+package cts.subject1.models;
 
 public class Dish {
     String name;
