@@ -31,8 +31,11 @@ public class Main {
             oven1.addDishToWaitingList(burnt);
         }
         catch(OvenTemperatureExceededException exception) {
-            System.out.println("I could not add the dish to the oven's waiting list due to: " + exception.getMessage());
+            System.out.println("I could not add the dish to the oven's waiting list due to: " + exception.getMessage() + "\n");
         }
+
+        oven1.displayWaitingList();
+
 
 
     }
