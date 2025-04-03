@@ -8,7 +8,7 @@ Reprezintă exerciții pentru activitatea de seminar. Fiecare dintre acestea tre
 Pentru fiecare Task, cerințele se află în directorul **`requirements/`**
 
 &emsp; 1. Singleton DP  
-&emsp; 2. Singleton DP - in progress
+&emsp; 2. Singleton DP - in progress <br>
 &emsp; 3. Builder DP
 
 ## Software Quality and Testing 2024–2025
@@ -23,5 +23,5 @@ Lab exercises — each must implement the SOLID principles.
 The requirements for each task can be found in the **`requirements/`** directory.
 
 &emsp; 1. Singleton DP  
-&emsp; 2. Singleton DP - in progress
+&emsp; 2. Singleton DP - in progress <br>
 &emsp; 3. Builder DP
