@@ -40,13 +40,14 @@ public class Main {
 
         // Requirements 3 & 4:
 
-        System.out.println("\nRequirements 3, 4: \n\n");
-        Oven registryOven1 = Oven.getInstance(200, "oven1");
+        System.out.println("\nRequirements 3, 4: \n");
+        Oven registryOven1 = Oven.getInstance(210, "oven1");
         Oven registryOven2 = Oven.getInstance(180, "oven2");
         Oven registryOven3 = Oven.getInstance(400, "oven3");
         Oven registryOven4 = Oven.getInstance(140, "oven4");
 
         try {
+            System.out.println("\nCreating an Oven after the oven limit has been reached: ");
             Oven registryOven5 = Oven.getInstance(300, "oven5");
         }
         catch (OvenCountLimitExceededException exception) {
@@ -55,5 +56,19 @@ public class Main {
 
         // Testing the singleton registry:
         Oven registryOvenTest1 = Oven.getInstance(200, "oven1");
+        if(!registryOven1.equals(registryOvenTest1)) {
+            throw new RuntimeException("Registry Oven instances are different!");
+        }
+
+        Dish lasagna = new Dish("lasagna", 180, 220);
+
+        Oven.addDish(lasagna);
+        Oven.addDish(pizza);
+        Oven.addDish(steak);
+        Oven.addDish(moussaka);
+        Oven.addDish(pie);
+
+        Oven.displayOvens();
+
     }
 }
