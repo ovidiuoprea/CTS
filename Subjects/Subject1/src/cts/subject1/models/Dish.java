@@ -3,16 +3,20 @@ package cts.subject1.models;
 public class Dish {
     String name;
     int cookingTime;
-    int cookingDegrees;
+    int requiredTemperature;
 
-    public Dish(String name, int cookingTime, int cookingDegrees) {
+    public Dish(String name, int cookingTime, int requiredTemperature) {
         this.name = name;
         this.cookingTime = cookingTime;
-        this.cookingDegrees = cookingDegrees;
+        this.requiredTemperature = requiredTemperature;
     }
 
     public int getCookingTime() {
         return cookingTime;
+    }
+
+    public int getRequiredTemperature() {
+        return requiredTemperature;
     }
 
     @Override
@@ -20,7 +24,7 @@ public class Dish {
         return "Dish{" +
                 "name='" + name + '\'' +
                 ", cookingTime=" + cookingTime +
-                ", cookingDegrees=" + cookingDegrees +
+                ", cookingDegrees=" + requiredTemperature +
                 '}';
     }
 }
