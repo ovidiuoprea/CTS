@@ -32,16 +32,21 @@ public class KebapMenu extends Menu implements IMenu {
 
     @Override
     public void handleUserInput(Integer userChoice) {
+
         switch(userChoice) {
             case KebapMenuOptionValues.CREATE:
                 this.showCreateKebapSubmenu();
                 break;
             case KebapMenuOptionValues.DELETE:
+                KebapManager.showAllKebaps();
+                Scanner in = new Scanner(System.in);
+                System.out.println("Alegeti kebap-ul pe care sa il sterg: ");
+                int choice = in.nextInt();
+                KebapManager.deleteKebap(choice);
                 // TODO
                 break;
             case KebapMenuOptionValues.SHOW_ALL:
-                KebapManager kebapManager = KebapManager.getInstance();
-                kebapManager.showAllKebaps();
+                KebapManager.showAllKebaps();
                 break;
             case KebapMenuOptionValues.FILTER:
                 // TODO

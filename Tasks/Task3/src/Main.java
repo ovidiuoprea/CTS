@@ -1,5 +1,6 @@
 import cts.task3.exceptions.SauceBeforeProteinException;
 import cts.task3.exceptions.TooManySaucesException;
+import cts.task3.interfaces.IMenu;
 import cts.task3.models.Kebap;
 import cts.task3.models.builders.KebapBuilder;
 import cts.task3.models.constants.MenuOptionLabels;
@@ -89,7 +90,8 @@ public class Main {
         SauceManager sauceManager = SauceManager.getInstance();
         sauceManager.setSauces(readSauces);
 
-        Menu mainMenu = new MainMenu(MenuOptionLabels.MAIN_MENU_OPTIONS_LABELS, null);
+        IMenu mainMenu = new MainMenu(MenuOptionLabels.MAIN_MENU_OPTIONS_LABELS, null);
         mainMenu.show();
+
     }
 }

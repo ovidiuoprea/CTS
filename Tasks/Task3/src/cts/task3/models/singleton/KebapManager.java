@@ -24,7 +24,11 @@ public class KebapManager {
         return kebaps;
     }
 
-    public void showAllKebaps() {
+    public static void deleteKebap(int userChoice) {
+        kebaps.remove(userChoice);
+    }
+
+    public static void showAllKebaps() {
         for(Kebap kebap : kebaps) {
             System.out.println(kebap);
         }
