@@ -3,12 +3,11 @@ package cts.task.practice.models.singleton.lazy;
 import cts.task.practice.interfaces.IGSMConnection;
 
 public class GSMConnection implements IGSMConnection {
-    private int connectedPhonesCount;
+    private int activeCalls;
     private static GSMConnection instance = null;
 
     private GSMConnection() {
-        // If a connection gets created, that means a phone is using it.
-        this.connectedPhonesCount = 1;
+        this.activeCalls = 0;
     }
 
     public static GSMConnection getInstance() {
@@ -20,6 +19,10 @@ public class GSMConnection implements IGSMConnection {
 
     @Override
     public void call() {
-        this.connectedPhonesCount++;
+        this.activeCalls++;
+    }
+
+    public int getActiveCalls() {
+        return activeCalls;
     }
 }
