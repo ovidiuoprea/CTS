@@ -17,6 +17,7 @@ public class Phone {
         this.version = version;
     }
 
+    // TODO: Delete this, or at least make it package visibility, as it's only used to test the factories in Main
     public Phone(String identifier, String version, AFeature antenna, AFeature battery, AFeature compass, AFeature speaker) {
         this.identifier = identifier;
         this.version = version;
