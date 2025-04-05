@@ -1,4 +1,4 @@
-import cts.task.practice.Features;
+import cts.task.practice.enums.Features;
 import cts.task.practice.abstracts.AFeature;
 import cts.task.practice.models.factory.feature.method.FeatureFactoryMethod;
 import cts.task.practice.models.factory.feature.simple.FeatureFactory;

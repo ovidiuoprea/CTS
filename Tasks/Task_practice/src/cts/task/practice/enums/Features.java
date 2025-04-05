@@ -1,4 +1,4 @@
-package cts.task.practice;
+package cts.task.practice.enums;
 
 public enum Features {
     BATTERY,

@@ -1,6 +1,6 @@
 package cts.task.practice.models.factory.feature.method;
 
-import cts.task.practice.Features;
+import cts.task.practice.enums.Features;
 import cts.task.practice.abstracts.AFeature;
 import cts.task.practice.exceptions.FeatureNotSupportedException;
 import cts.task.practice.models.features.Antenna;
