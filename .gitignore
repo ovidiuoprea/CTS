@@ -1,1 +1,7 @@
 /out
+.idea/
+!.idea/inspectionProfiles
+!.idea/codeStyles
+!.idea/misc.xml
+!.idea/modules.xml
+*.iml
