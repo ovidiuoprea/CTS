@@ -1,9 +1,14 @@
 import cts.task.practice.enums.CallType;
 import cts.task.practice.enums.Features;
 import cts.task.practice.abstracts.AFeature;
+import cts.task.practice.models.builder.PhoneBuilder;
 import cts.task.practice.models.factory.feature.method.FeatureFactoryMethod;
 import cts.task.practice.models.factory.feature.simple.FeatureFactory;
 import cts.task.practice.models.builder.Phone;
+import cts.task.practice.models.features.Compass;
+import cts.task.practice.models.features.Speaker;
+import cts.task.practice.models.features.Battery;
+import cts.task.practice.models.features.Antenna;
 import cts.task.practice.models.singleton.lazy.GSMConnection;
 import cts.task.practice.models.singleton.registry.GSMConnectionManager;
 
@@ -80,6 +85,29 @@ public class Main {
         System.out.println("Number of active URGENT calls: " + connectionUrgent.getActiveCalls());
         System.out.println("Number of active NORMAL calls: " + connectionNormal.getActiveCalls());
 
+        // FIXME: Mixing Feature Factory Method and Feature Simple Factory to ensure they work together.
+        Phone builderPhone1 = new PhoneBuilder("Phone 1 created with builder", "0.2.0")
+                .addCompass((Compass) new FeatureFactoryMethod().getFeature(Features.COMPASS, "compass", 10))
+                .addSpeaker((Speaker) new FeatureFactoryMethod().getFeature(Features.SPEAKER, "speaker", 20))
+                .addAntenna((Antenna) new FeatureFactory().getFeature(Features.ANTENNA, "antenna", 30))
+                .build();
+
+        System.out.println("\nRequirement 4. \n");
+        System.out.println("Custom phone created with builder:\n" + builderPhone1 + "\n");
+
+        Phone builderPhone2 = new PhoneBuilder("Phone 2 created with builder", "0.2.0")
+                .addCompass((Compass) new FeatureFactory().getFeature(Features.COMPASS, "compass", 10))
+                .addSpeaker((Speaker) new FeatureFactoryMethod().getFeature(Features.SPEAKER, "speaker", 20))
+                .addAntenna((Antenna) new FeatureFactory().getFeature(Features.ANTENNA, "antenna", 30))
+                .addBattery((Battery) new FeatureFactoryMethod().getFeature(Features.BATTERY, "battery", 40))
+                .build();
+
+        System.out.println("Custom phone created with builder:\n" + builderPhone2 + "\n");
+
+        Phone builderPhone3 = new PhoneBuilder("Phone 3 created with builder", "0.3.0")
+                .build();
+
+        System.out.println("Custom phone created with builder:\n" + builderPhone3 + "\n");
     }
 
 }
