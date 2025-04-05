@@ -4,6 +4,7 @@ import cts.task.practice.models.features.Antenna;
 import cts.task.practice.models.features.Battery;
 import cts.task.practice.models.features.Compass;
 import cts.task.practice.models.features.Speaker;
+import cts.task.practice.models.prototype.OS;
 
 public class PhoneBuilder extends APhoneBuilder{
     Phone phone;
@@ -33,6 +34,12 @@ public class PhoneBuilder extends APhoneBuilder{
     @Override
     public APhoneBuilder addSpeaker(Speaker speaker) {
         this.phone.setSpeaker(speaker);
+        return this;
+    }
+
+    @Override
+    public APhoneBuilder addOS(OS os) {
+        this.phone.setOS(os);
         return this;
     }
 
