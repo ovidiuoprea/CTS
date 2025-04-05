@@ -29,6 +29,4 @@ public class OSPrototypeFactoryEager {
                 throw new OSVersionNotImplementedException(version);
         }
     }
-
-    //TODO: Implement lazy Prototype Factory
 }
