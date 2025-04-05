@@ -1,7 +1,9 @@
 package cts.task.practice.models;
 import cts.task.practice.abstracts.AFeature;
+import cts.task.practice.enums.CallType;
 import cts.task.practice.models.factory.feature.simple.FeatureFactory;
 import cts.task.practice.models.singleton.lazy.GSMConnection;
+import cts.task.practice.models.singleton.registry.GSMConnectionManager;
 
 public class Phone {
     String identifier;
@@ -37,5 +39,12 @@ public class Phone {
     public void call() {
         gsmConnection.call();
     }
+
+    public void callRegistry(CallType callType) {
+        GSMConnectionManager connection = GSMConnectionManager.getInstance(callType);
+        connection.call();
+    }
+
+
 
 }
