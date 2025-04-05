@@ -26,7 +26,7 @@ public class OSPrototypeFactory {
             case 2:
                 return (OS) OSVersions.get(2).clone();
             default:
-                throw new OSVersionNotImplementedException();
+                throw new OSVersionNotImplementedException(version);
         }
     }
 
