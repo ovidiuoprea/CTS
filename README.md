@@ -4,24 +4,24 @@
 Versiune JDK folosită: Oracle OpenJDK 22.0.2
 
 ## Tasks
-Reprezintă exerciții pentru activitatea de seminar. Fiecare dintre acestea trebuie să implementeze SOLID.
+Reprezintă exerciții pentru activitatea de seminar. Fiecare dintre acestea trebuie să respecte principiile SOLID.<br>
 Pentru fiecare Task, cerințele se află în directorul **`requirements/`**
 
-&emsp; 1. Singleton DP  
-&emsp; 2. Singleton DP - in progress <br>
-&emsp; 3. Builder DP
+&emsp; Task1: Singleton DP - in progress <br>
+&emsp; Task3: Builder DP - in progress <br>
+&emsp; Task_practice: Singleton DP - Lazy, Registry; Factory Method DP; Builder DP; Prototype DP, Prototype Factory
 
 ## Software Quality and Testing 2024–2025
 
-### How to run the Projects
+### Prerequisites
 
-JDK version used: Oracle OpenJDK 22.0.2
+Oracle OpenJDK 22.0.2
 
 ## Tasks
 
-Lab exercises — each must implement the SOLID principles.
+Lab exercises — each must follow the SOLID principles.<br>
 The requirements for each task can be found in the **`requirements/`** directory.
 
-&emsp; 1. Singleton DP  
-&emsp; 2. Singleton DP - in progress <br>
-&emsp; 3. Builder DP
+&emsp; Task1: Singleton DP - in progress <br>
+&emsp; Task3: Builder DP - in progress <br>
+&emsp; Task_practice: Singleton DP - Lazy, Registry; Factory Method DP; Builder DP; Prototype DP, Prototype Factory
