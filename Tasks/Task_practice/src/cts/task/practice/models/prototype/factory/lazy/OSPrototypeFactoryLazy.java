@@ -9,7 +9,7 @@ public class OSPrototypeFactoryLazy {
     private static HashMap<Integer, OS> versions = new HashMap<>();
     public static final Integer OS_VERSIONS_COUNT = 2;
 
-    private static OS getOS(int version) throws InterruptedException, CloneNotSupportedException, OSVersionNotImplementedException {
+    public static OS getOS(int version) throws InterruptedException, CloneNotSupportedException, OSVersionNotImplementedException {
         if(version > 0 && version <= OS_VERSIONS_COUNT) {
             OS os = versions.get(version);
             if(os == null) {
