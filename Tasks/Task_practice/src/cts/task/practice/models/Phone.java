@@ -1,4 +1,5 @@
 package cts.task.practice.models;
+import cts.task.practice.abstracts.AFeature;
 
 public class Phone {
     String identifier;
