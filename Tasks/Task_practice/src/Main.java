@@ -3,7 +3,7 @@ import cts.task.practice.enums.Features;
 import cts.task.practice.abstracts.AFeature;
 import cts.task.practice.models.factory.feature.method.FeatureFactoryMethod;
 import cts.task.practice.models.factory.feature.simple.FeatureFactory;
-import cts.task.practice.models.Phone;
+import cts.task.practice.models.builder.Phone;
 import cts.task.practice.models.singleton.lazy.GSMConnection;
 import cts.task.practice.models.singleton.registry.GSMConnectionManager;
 

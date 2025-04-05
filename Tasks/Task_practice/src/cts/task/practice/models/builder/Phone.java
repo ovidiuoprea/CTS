@@ -1,7 +1,6 @@
-package cts.task.practice.models;
+package cts.task.practice.models.builder;
 import cts.task.practice.abstracts.AFeature;
 import cts.task.practice.enums.CallType;
-import cts.task.practice.models.factory.feature.simple.FeatureFactory;
 import cts.task.practice.models.singleton.lazy.GSMConnection;
 import cts.task.practice.models.singleton.registry.GSMConnectionManager;
 
@@ -13,7 +12,10 @@ public class Phone {
     AFeature compass;
     AFeature speaker;
 
-    GSMConnection gsmConnection = GSMConnection.getInstance();
+    Phone(String identifier, String version) {
+        this.identifier = identifier;
+        this.version = version;
+    }
 
     public Phone(String identifier, String version, AFeature antenna, AFeature battery, AFeature compass, AFeature speaker) {
         this.identifier = identifier;
@@ -36,7 +38,24 @@ public class Phone {
                 '}';
     }
 
+    public void setAntenna(AFeature antenna) {
+        this.antenna = antenna;
+    }
+
+    public void setBattery(AFeature battery) {
+        this.battery = battery;
+    }
+
+    public void setCompass(AFeature compass) {
+        this.compass = compass;
+    }
+
+    public void setSpeaker(AFeature speaker) {
+        this.speaker = speaker;
+    }
+
     public void call() {
+        GSMConnection gsmConnection = GSMConnection.getInstance();
         gsmConnection.call();
     }
 
