@@ -1,6 +1,7 @@
 import cts.task.practice.enums.CallType;
 import cts.task.practice.enums.Features;
 import cts.task.practice.abstracts.AFeature;
+import cts.task.practice.models.OS;
 import cts.task.practice.models.builder.PhoneBuilder;
 import cts.task.practice.models.factory.feature.method.FeatureFactoryMethod;
 import cts.task.practice.models.factory.feature.simple.FeatureFactory;
@@ -108,6 +109,22 @@ public class Main {
                 .build();
 
         System.out.println("Custom phone created with builder:\n" + builderPhone3 + "\n");
+
+        System.out.println("\nRequirement 5.\n");
+        try {
+            OS os = new OS(1);
+            System.out.println("Created the OS: " + os);
+
+            OS prototypeOS = (OS) os.clone();
+            System.out.println("Prototype OS: " + prototypeOS);
+        }
+        catch (InterruptedException e) {
+            System.out.println("Could not create OS due to: " + e.getMessage());
+        } catch (CloneNotSupportedException e) {
+            throw new RuntimeException(e);
+        }
+
+
     }
 
 }
