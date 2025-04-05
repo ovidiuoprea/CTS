@@ -13,6 +13,7 @@ public class OS implements Cloneable {
     @Override
     public Object clone() throws CloneNotSupportedException {
         // Since we don't have any fields that need deep copy, this is enough:
+        System.out.println("Cloning the OS v" + this.version + ".");
         return super.clone();
     }
 
