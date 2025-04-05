@@ -1,5 +1,5 @@
 ### 
-## Calitate și Testare Software 2024-2025
+## RO: Calitate și Testare Software 2024-2025
 ### Instrucțiuni rulare
 Versiune JDK folosită: Oracle OpenJDK 22.0.2
 
@@ -13,7 +13,10 @@ Pentru fiecare Task, cerințele se află în directorul **`requirements/`**
 
 Dacă există, fișierul `reasoning.md` prezintă motivele pentru care am ales să implementez un design pattern. <br>
 
-## Software Quality and Testing 2024–2025
+
+
+
+## EN: Software Quality and Testing 2024–2025
 
 ### Prerequisites
 
