@@ -12,6 +12,7 @@ import cts.task.practice.models.features.Speaker;
 import cts.task.practice.models.features.Battery;
 import cts.task.practice.models.features.Antenna;
 import cts.task.practice.models.prototype.factory.eager.OSPrototypeFactoryEager;
+import cts.task.practice.models.prototype.factory.lazy.OSPrototypeFactoryLazy;
 import cts.task.practice.models.singleton.lazy.GSMConnection;
 import cts.task.practice.models.singleton.registry.GSMConnectionManager;
 
@@ -126,7 +127,7 @@ public class Main {
             throw new RuntimeException(e);
         }
 
-        System.out.println("\nRequirement 6.\n");
+        System.out.println("\nRequirement 6 - Eager.\n");
         try {
             OS OSversion1 = OSPrototypeFactoryEager.getOS(1);
             OS OSversion2 = OSPrototypeFactoryEager.getOS(2);
@@ -153,6 +154,30 @@ public class Main {
             System.out.println("Could not create the OS due to: " + exception.getMessage());
         }
 
+        System.out.println("\nRequirement 6 - Lazy.\n");
+        try {
+            OS OSVersion1 = OSPrototypeFactoryLazy.getOS(1);
+            OS OSVersion1Copy = OSPrototypeFactoryLazy.getOS(1);
+
+            OS OSVersion2 = OSPrototypeFactoryLazy.getOS(2);
+            OS OSVersion2Copy = OSPrototypeFactoryLazy.getOS(2);
+
+            System.out.println("\nAll the objects created using prototype factory lazy:\n");
+            System.out.println(OSVersion1);
+            System.out.println(OSVersion2);
+
+            System.out.println(OSVersion1Copy);
+            System.out.println(OSVersion2Copy);
+
+            System.out.println("Creating OS with version not already implemented: ");
+            OS OSVersion3 = OSPrototypeFactoryLazy.getOS(3);
+        }
+        catch (InterruptedException | CloneNotSupportedException exception) {
+            System.out.println("Cloning the OS failed due to: " + exception.getMessage());
+        }
+        catch (OSVersionNotImplementedException exception) {
+            System.out.println("Could not create the OS due to: " + exception.getMessage());
+        }
 
     }
 
