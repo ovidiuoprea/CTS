@@ -8,4 +8,12 @@ public class Speaker extends AFeature {
         super(name, price);
         this.power = 60;
     }
+
+    @Override
+    public String toString() {
+        return "Speaker{" +
+                super.toString() +
+                "power=" + power +
+                '}';
+    }
 }

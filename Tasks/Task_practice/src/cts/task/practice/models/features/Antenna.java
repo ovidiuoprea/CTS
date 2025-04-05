@@ -8,4 +8,12 @@ public class Antenna extends AFeature{
         super(name, price);
         this.band = "5G";
     }
+
+    @Override
+    public String toString() {
+        return "Antenna{" +
+                super.toString() +
+                "band='" + band + '\'' +
+                '}';
+    }
 }

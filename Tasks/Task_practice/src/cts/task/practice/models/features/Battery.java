@@ -8,4 +8,12 @@ public class Battery extends AFeature{
         super(name, price);
         this.capacity = 1000;
     }
+
+    @Override
+    public String toString() {
+        return "Battery{" +
+                super.toString() +
+                "capacity=" + capacity +
+                '}';
+    }
 }

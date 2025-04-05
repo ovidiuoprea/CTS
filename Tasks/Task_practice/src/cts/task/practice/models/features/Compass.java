@@ -8,4 +8,12 @@ public class Compass extends AFeature {
         super(name, price);
         this.currentDirection = 0; // By default, make it point to North.
     }
+
+    @Override
+    public String toString() {
+        return "Compass{" +
+                super.toString() +
+                "currentDirection=" + currentDirection +
+                '}';
+    }
 }
