@@ -1,9 +1,11 @@
+import cts.task.practice.enums.CallType;
 import cts.task.practice.enums.Features;
 import cts.task.practice.abstracts.AFeature;
 import cts.task.practice.models.factory.feature.method.FeatureFactoryMethod;
 import cts.task.practice.models.factory.feature.simple.FeatureFactory;
 import cts.task.practice.models.Phone;
 import cts.task.practice.models.singleton.lazy.GSMConnection;
+import cts.task.practice.models.singleton.registry.GSMConnectionManager;
 
 
 public class Main {
@@ -55,6 +57,21 @@ public class Main {
         phone2.call();
 
         System.out.println("Active calls for the GSM Connection: " + connection.getActiveCalls());
+
+        System.out.println("\nRequirement 3.\n");
+        GSMConnectionManager connectionPriority = GSMConnectionManager.getInstance(CallType.PRIORITY);
+        GSMConnectionManager connectionNormal = GSMConnectionManager.getInstance(CallType.NORMAL);
+        GSMConnectionManager connectionUrgent = GSMConnectionManager.getInstance(CallType.URGENT);
+
+        // Testing if a singleton registry instance is unique:
+        GSMConnectionManager connectionPriorityTest = GSMConnectionManager.getInstance(CallType.PRIORITY);
+
+        if(!connectionPriority.equals(connectionPriorityTest)) {
+            throw new RuntimeException("GSM Connection manager instance is not unique");
+        }
+
+        
+
     }
 
 }
