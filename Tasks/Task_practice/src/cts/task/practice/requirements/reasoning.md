@@ -21,4 +21,6 @@ Incerc sa fac si Simple Factory si Factory Method
 5. Prototype
  - construirea de la zero necesită foarte multe resurse și se durează o eternitate
  - trebuie să obținem mai multe instanțe fără a aștepta atât de mult
- - 
+
+6. Prototype Factory
+ - utilizatorii pot copia foarte rapid orice versiune de OS
