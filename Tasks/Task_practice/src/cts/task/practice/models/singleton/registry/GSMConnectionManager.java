@@ -27,4 +27,8 @@ public class GSMConnectionManager implements IGSMConnection {
     public void call() {
         this.activeCalls++;
     }
+
+    public int getActiveCalls() {
+        return activeCalls;
+    }
 }

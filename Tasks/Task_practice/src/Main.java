@@ -70,7 +70,15 @@ public class Main {
             throw new RuntimeException("GSM Connection manager instance is not unique");
         }
 
-        
+        phone.callRegistry(CallType.URGENT);
+        phone.callRegistry(CallType.PRIORITY);
+
+        phone2.callRegistry(CallType.NORMAL);
+        phone2.callRegistry(CallType.URGENT);
+
+        System.out.println("Number of active PRIORITY calls: " + connectionPriority.getActiveCalls());
+        System.out.println("Number of active URGENT calls: " + connectionUrgent.getActiveCalls());
+        System.out.println("Number of active NORMAL calls: " + connectionNormal.getActiveCalls());
 
     }
 
