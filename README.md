@@ -13,8 +13,7 @@ Pentru fiecare Task, cerințele se află în directorul **`requirements/`**
 
 Dacă există, fișierul `reasoning.md` prezintă motivele pentru care am ales să implementez un design pattern. <br>
 
-
-
+<br><br><br>
 
 ## EN: Software Quality and Testing 2024–2025
 
