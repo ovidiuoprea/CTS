@@ -169,6 +169,14 @@ public class Main {
             System.out.println(OSVersion1Copy);
             System.out.println(OSVersion2Copy);
 
+            // Test creating a phone with a prototype factory OS via the builder:
+            Phone phoneOS = new PhoneBuilder("Phone with OS created with builder", "0.3.0")
+                    .addOS(OSPrototypeFactoryLazy.getOS(1))
+                    .addAntenna((Antenna) new FeatureFactoryMethod().getFeature(Features.ANTENNA, "antenna", 30))
+                    .build();
+
+            System.out.println("Phone with prototype OS created with builder: " + phoneOS);
+
             System.out.println("Creating OS with version not already implemented: ");
             OS OSVersion3 = OSPrototypeFactoryLazy.getOS(3);
         }
@@ -178,7 +186,5 @@ public class Main {
         catch (OSVersionNotImplementedException exception) {
             System.out.println("Could not create the OS due to: " + exception.getMessage());
         }
-
     }
-
 }
