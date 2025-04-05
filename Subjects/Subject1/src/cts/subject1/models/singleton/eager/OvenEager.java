@@ -20,6 +20,10 @@ public class OvenEager {
         return instance;
     }
 
+    /**
+     * Adds the given dish to the singleton oven's waiting list.
+     * @param dish
+     */
     public void addDishToWaitingList(Dish dish) {
         System.out.println("Adding " + dish + " to the oven's waiting list...");
         if(dish.getCookingTime() > this.maximumDegrees) {

@@ -48,8 +48,6 @@ public class Oven {
                 '}';
     }
 
-    // We're not breaking singleton here, as we're just filtering the instances.
-
     /**
      * Get a map of ovens with maximumTemperature >= given required temperature
      * Not breaking singleton, as it's only filtering already-existing instances, not creating new ones
