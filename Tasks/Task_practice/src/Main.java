@@ -1,7 +1,7 @@
 import cts.task.practice.enums.CallType;
 import cts.task.practice.enums.Features;
 import cts.task.practice.abstracts.AFeature;
-import cts.task.practice.models.OS;
+import cts.task.practice.models.prototype.OS;
 import cts.task.practice.models.builder.PhoneBuilder;
 import cts.task.practice.models.factory.feature.method.FeatureFactoryMethod;
 import cts.task.practice.models.factory.feature.simple.FeatureFactory;

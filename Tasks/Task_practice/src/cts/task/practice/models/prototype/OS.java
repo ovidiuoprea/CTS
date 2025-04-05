@@ -1,4 +1,4 @@
-package cts.task.practice.models;
+package cts.task.practice.models.prototype;
 
 public class OS implements Cloneable {
     int version = 0;
