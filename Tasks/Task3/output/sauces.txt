@@ -1,0 +1,4 @@
+non-fermenting,300,Ketcup,false
+non-fermenting,200,Chilli,true
+fermenting,360,Mayonnaise,false,6
+fermenting,365,Spicy mayonnaise,true,6
