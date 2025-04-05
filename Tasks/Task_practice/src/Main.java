@@ -48,7 +48,11 @@ public class Main {
         if(!connection.equals(connection2)) {
             throw new RuntimeException("GSM Connection singleton instance is not unique");
         }
-        
+
+        phone.call();
+        phone2.call();
+
+        System.out.println("Active calls for the GSM Connection: " + connection.getActiveCalls());
     }
 
 }
