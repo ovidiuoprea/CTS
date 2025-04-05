@@ -11,6 +11,8 @@ Pentru fiecare Task, cerințele se află în directorul **`requirements/`**
 &emsp; Task3: Builder DP - in progress <br>
 &emsp; Task_practice: Singleton DP - Lazy, Registry; Factory Method DP; Builder DP; Prototype DP, Prototype Factory
 
+Dacă există, fișierul `reasoning.md` prezintă motivele pentru care am ales să implementez un design pattern. <br>
+
 ## Software Quality and Testing 2024–2025
 
 ### Prerequisites
@@ -25,3 +27,5 @@ The requirements for each task can be found in the **`requirements/`** directory
 &emsp; Task1: Singleton DP - in progress <br>
 &emsp; Task3: Builder DP - in progress <br>
 &emsp; Task_practice: Singleton DP - Lazy, Registry; Factory Method DP; Builder DP; Prototype DP, Prototype Factory
+
+If present, the `reasoning.md` file contains the thought process behind implementing a design pattern.
