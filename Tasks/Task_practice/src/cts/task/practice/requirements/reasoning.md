@@ -12,3 +12,8 @@ Incerc sa fac si Simple Factory si Factory Method
 3. Singleton registry
  - furnizor care ofera un set de conexiuni
  - fiecare conexiune va fi unica in felul ei
+
+4. Builder
+ - trebuie implementat ceva care sa creeze telefoane in functie de nevoile clientului
+ - odata ce un telefon a fost creat, nu se mai poate modifica
+ - toate telefoanele vor avea cel putin un identificator si o versiune - atributele obligatorii din builder, restul sunt optionale
