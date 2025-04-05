@@ -11,7 +11,7 @@ import cts.task.practice.models.features.Compass;
 import cts.task.practice.models.features.Speaker;
 import cts.task.practice.models.features.Battery;
 import cts.task.practice.models.features.Antenna;
-import cts.task.practice.models.prototype.factory.eager.OSPrototypeFactory;
+import cts.task.practice.models.prototype.factory.eager.OSPrototypeFactoryEager;
 import cts.task.practice.models.singleton.lazy.GSMConnection;
 import cts.task.practice.models.singleton.registry.GSMConnectionManager;
 
@@ -128,12 +128,12 @@ public class Main {
 
         System.out.println("\nRequirement 6.\n");
         try {
-            OS OSversion1 = OSPrototypeFactory.getOS(1);
-            OS OSversion2 = OSPrototypeFactory.getOS(2);
+            OS OSversion1 = OSPrototypeFactoryEager.getOS(1);
+            OS OSversion2 = OSPrototypeFactoryEager.getOS(2);
 
-            OS OSVersion1Copy = OSPrototypeFactory.getOS(1);
-            OS OSVersion1Copy2 = OSPrototypeFactory.getOS(1);
-            OS OSVersion2Copy = OSPrototypeFactory.getOS(2);
+            OS OSVersion1Copy = OSPrototypeFactoryEager.getOS(1);
+            OS OSVersion1Copy2 = OSPrototypeFactoryEager.getOS(1);
+            OS OSVersion2Copy = OSPrototypeFactoryEager.getOS(2);
 
             System.out.println("\nAll the objects created using prototype factory eager:\n");
             System.out.println(OSversion1);
@@ -144,7 +144,7 @@ public class Main {
             System.out.println(OSVersion2Copy);
 
             System.out.println("Creating OS with version not already implemented: ");
-            OS OSversion3 = OSPrototypeFactory.getOS(3);
+            OS OSversion3 = OSPrototypeFactoryEager.getOS(3);
         }
         catch (CloneNotSupportedException exception) {
             System.out.println("Cloning the OS failed due to: " + exception.getMessage());

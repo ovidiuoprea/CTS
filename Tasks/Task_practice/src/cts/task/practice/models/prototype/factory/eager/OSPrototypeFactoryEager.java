@@ -5,7 +5,7 @@ import cts.task.practice.models.prototype.OS;
 
 import java.util.HashMap;
 
-public class OSPrototypeFactory {
+public class OSPrototypeFactoryEager {
     private static HashMap<Integer, OS> OSVersions = new HashMap<>();
 
     static {
