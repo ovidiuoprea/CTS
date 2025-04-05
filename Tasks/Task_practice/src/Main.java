@@ -1,6 +1,7 @@
 import cts.task.practice.enums.CallType;
 import cts.task.practice.enums.Features;
 import cts.task.practice.abstracts.AFeature;
+import cts.task.practice.exceptions.OSVersionNotImplementedException;
 import cts.task.practice.models.prototype.OS;
 import cts.task.practice.models.builder.PhoneBuilder;
 import cts.task.practice.models.factory.feature.method.FeatureFactoryMethod;
@@ -10,6 +11,7 @@ import cts.task.practice.models.features.Compass;
 import cts.task.practice.models.features.Speaker;
 import cts.task.practice.models.features.Battery;
 import cts.task.practice.models.features.Antenna;
+import cts.task.practice.models.prototype.factory.eager.OSPrototypeFactory;
 import cts.task.practice.models.singleton.lazy.GSMConnection;
 import cts.task.practice.models.singleton.registry.GSMConnectionManager;
 
@@ -122,6 +124,33 @@ public class Main {
             System.out.println("Could not create OS due to: " + e.getMessage());
         } catch (CloneNotSupportedException e) {
             throw new RuntimeException(e);
+        }
+
+        System.out.println("\nRequirement 6.\n");
+        try {
+            OS OSversion1 = OSPrototypeFactory.getOS(1);
+            OS OSversion2 = OSPrototypeFactory.getOS(2);
+
+            OS OSVersion1Copy = OSPrototypeFactory.getOS(1);
+            OS OSVersion1Copy2 = OSPrototypeFactory.getOS(1);
+            OS OSVersion2Copy = OSPrototypeFactory.getOS(2);
+
+            System.out.println("\nAll the objects created using prototype factory eager:\n");
+            System.out.println(OSversion1);
+            System.out.println(OSversion2);
+
+            System.out.println(OSVersion1Copy);
+            System.out.println(OSVersion1Copy2);
+            System.out.println(OSVersion2Copy);
+
+            System.out.println("Creating OS with version not already implemented: ");
+            OS OSversion3 = OSPrototypeFactory.getOS(3);
+        }
+        catch (CloneNotSupportedException exception) {
+            System.out.println("Cloning the OS failed due to: " + exception.getMessage());
+        }
+        catch (OSVersionNotImplementedException exception) {
+            System.out.println("Could not create the OS due to: " + exception.getMessage());
         }
 
 
