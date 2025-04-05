@@ -3,6 +3,7 @@ import cts.task.practice.abstracts.AFeature;
 import cts.task.practice.models.factory.feature.method.FeatureFactoryMethod;
 import cts.task.practice.models.factory.feature.simple.FeatureFactory;
 import cts.task.practice.models.Phone;
+import cts.task.practice.models.singleton.lazy.GSMConnection;
 
 
 public class Main {
@@ -40,5 +41,14 @@ public class Main {
         );
 
         System.out.println(phone2);
+
+        GSMConnection connection = GSMConnection.getInstance();
+        GSMConnection connection2 = GSMConnection.getInstance();
+
+        if(!connection.equals(connection2)) {
+            throw new RuntimeException("GSM Connection singleton instance is not unique");
+        }
+        
     }
+
 }
