@@ -1,6 +1,7 @@
 package cts.task.practice.models.builder;
 import cts.task.practice.abstracts.AFeature;
 import cts.task.practice.enums.CallType;
+import cts.task.practice.models.prototype.OS;
 import cts.task.practice.models.singleton.lazy.GSMConnection;
 import cts.task.practice.models.singleton.registry.GSMConnectionManager;
 
@@ -11,6 +12,7 @@ public class Phone {
     AFeature battery; // example
     AFeature compass;
     AFeature speaker;
+    OS os;
 
     Phone(String identifier, String version) {
         this.identifier = identifier;
@@ -36,6 +38,7 @@ public class Phone {
                 ", battery=" + battery +
                 ", compass=" + compass +
                 ", speaker=" + speaker +
+                ", os=" + os +
                 '}';
     }
 
@@ -53,6 +56,10 @@ public class Phone {
 
     public void setSpeaker(AFeature speaker) {
         this.speaker = speaker;
+    }
+
+    public void setOS(OS os) {
+        this.os = os;
     }
 
     public void call() {
