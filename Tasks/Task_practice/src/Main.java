@@ -8,6 +8,7 @@ import cts.task.practice.models.singleton.lazy.GSMConnection;
 
 public class Main {
     public static void main(String[] args) {
+        System.out.println("Requirement 1.\n");
         FeatureFactory simpleFactory = new FeatureFactory();
 
         AFeature simpleAntenna = simpleFactory.getFeature(Features.ANTENNA, "Simple antenna", 10);
@@ -42,6 +43,7 @@ public class Main {
 
         System.out.println(phone2);
 
+        System.out.println("\nRequirement 2.\n");
         GSMConnection connection = GSMConnection.getInstance();
         GSMConnection connection2 = GSMConnection.getInstance();
 
