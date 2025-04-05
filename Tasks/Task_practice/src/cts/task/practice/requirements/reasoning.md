@@ -17,3 +17,8 @@ Incerc sa fac si Simple Factory si Factory Method
  - trebuie implementat ceva care sa creeze telefoane in functie de nevoile clientului
  - odata ce un telefon a fost creat, nu se mai poate modifica
  - toate telefoanele vor avea cel putin un identificator si o versiune - atributele obligatorii din builder, restul sunt optionale
+
+5. Prototype
+ - construirea de la zero necesită foarte multe resurse și se durează o eternitate
+ - trebuie să obținem mai multe instanțe fără a aștepta atât de mult
+ - 
