@@ -1,3 +1,4 @@
+import cts.task.practice.constants.OSVersion;
 import cts.task.practice.enums.CallType;
 import cts.task.practice.enums.Features;
 import cts.task.practice.abstracts.AFeature;
@@ -129,12 +130,12 @@ public class Main {
 
         System.out.println("\nRequirement 6 - Eager.\n");
         try {
-            OS OSversion1 = OSPrototypeFactoryEager.getOS(1);
-            OS OSversion2 = OSPrototypeFactoryEager.getOS(2);
+            OS OSversion1 = OSPrototypeFactoryEager.getOS(OSVersion.VERSION_1);
+            OS OSversion2 = OSPrototypeFactoryEager.getOS(OSVersion.VERSION_2);
 
-            OS OSVersion1Copy = OSPrototypeFactoryEager.getOS(1);
-            OS OSVersion1Copy2 = OSPrototypeFactoryEager.getOS(1);
-            OS OSVersion2Copy = OSPrototypeFactoryEager.getOS(2);
+            OS OSVersion1Copy = OSPrototypeFactoryEager.getOS(OSVersion.VERSION_1);
+            OS OSVersion1Copy2 = OSPrototypeFactoryEager.getOS(OSVersion.VERSION_1);
+            OS OSVersion2Copy = OSPrototypeFactoryEager.getOS(OSVersion.VERSION_2);
 
             System.out.println("\nAll the objects created using prototype factory eager:\n");
             System.out.println(OSversion1);
@@ -145,7 +146,7 @@ public class Main {
             System.out.println(OSVersion2Copy);
 
             System.out.println("Creating OS with version not already implemented: ");
-            OS OSversion3 = OSPrototypeFactoryEager.getOS(3);
+            OS OSversion3 = OSPrototypeFactoryEager.getOS(OSVersion.VERSION_3);
         }
         catch (CloneNotSupportedException exception) {
             System.out.println("Cloning the OS failed due to: " + exception.getMessage());
@@ -156,11 +157,11 @@ public class Main {
 
         System.out.println("\nRequirement 6 - Lazy.\n");
         try {
-            OS OSVersion1 = OSPrototypeFactoryLazy.getOS(1);
-            OS OSVersion1Copy = OSPrototypeFactoryLazy.getOS(1);
+            OS OSVersion1 = OSPrototypeFactoryLazy.getOS(OSVersion.VERSION_1);
+            OS OSVersion1Copy = OSPrototypeFactoryLazy.getOS(OSVersion.VERSION_1);
 
-            OS OSVersion2 = OSPrototypeFactoryLazy.getOS(2);
-            OS OSVersion2Copy = OSPrototypeFactoryLazy.getOS(2);
+            OS OSVersion2 = OSPrototypeFactoryLazy.getOS(OSVersion.VERSION_2);
+            OS OSVersion2Copy = OSPrototypeFactoryLazy.getOS(OSVersion.VERSION_2);
 
             System.out.println("\nAll the objects created using prototype factory lazy:\n");
             System.out.println(OSVersion1);
@@ -171,14 +172,14 @@ public class Main {
 
             // Test creating a phone with a prototype factory OS via the builder:
             Phone phoneOS = new PhoneBuilder("Phone with OS created with builder", "0.3.0")
-                    .addOS(OSPrototypeFactoryLazy.getOS(1))
+                    .addOS(OSPrototypeFactoryLazy.getOS(OSVersion.VERSION_1))
                     .addAntenna((Antenna) new FeatureFactoryMethod().getFeature(Features.ANTENNA, "antenna", 30))
                     .build();
 
             System.out.println("Phone with prototype OS created with builder: " + phoneOS);
 
             System.out.println("Creating OS with version not already implemented: ");
-            OS OSVersion3 = OSPrototypeFactoryLazy.getOS(3);
+            OS OSVersion3 = OSPrototypeFactoryLazy.getOS(OSVersion.VERSION_3);
         }
         catch (InterruptedException | CloneNotSupportedException exception) {
             System.out.println("Cloning the OS failed due to: " + exception.getMessage());
