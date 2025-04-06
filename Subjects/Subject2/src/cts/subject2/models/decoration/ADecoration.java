@@ -7,4 +7,13 @@ public abstract class ADecoration {
     public ADecoration(String name) {
         this.name = name;
     }
+
+
+    @Override
+    public String toString() {
+        return "ADecoration{" +
+                "name='" + name + '\'' +
+                ", fireHazardLevel=" + fireHazardLevel +
+                '}';
+    }
 }
