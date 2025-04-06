@@ -42,4 +42,21 @@ public class Store {
                 ", decorations=" + decorations +
                 '}';
     }
+
+    public int getTotalFireHazardLevel() {
+        int fireHazardLevel = 0;
+        int totalFireHazardItems = 0;
+
+        fireHazardLevel += floor.getFireHazardLevel();
+        totalFireHazardItems++;
+
+        if(!decorations.isEmpty()) {
+            for(ADecoration decoration : decorations) {
+                fireHazardLevel += decoration.getFireHazardLevel();
+                totalFireHazardItems++;
+            }
+        }
+
+        return fireHazardLevel / totalFireHazardItems;
+    }
 }

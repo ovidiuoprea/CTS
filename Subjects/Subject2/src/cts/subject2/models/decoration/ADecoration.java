@@ -8,6 +8,9 @@ public abstract class ADecoration {
         this.name = name;
     }
 
+    public int getFireHazardLevel() {
+        return fireHazardLevel;
+    }
 
     @Override
     public String toString() {
