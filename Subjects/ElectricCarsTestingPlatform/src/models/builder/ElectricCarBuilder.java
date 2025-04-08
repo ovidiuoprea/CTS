@@ -26,6 +26,15 @@ public class ElectricCarBuilder implements IElectricCarsBuilder {
 
     @Override
     public ElectricCar build() {
+        System.out.println("Building car!");
+        Thread thread = new Thread(()->{
+            try {
+                Thread.sleep(5000);
+            } catch (InterruptedException e) {
+                throw new RuntimeException(e);
+            }
+        });
+        thread.run();
         return car;
     }
 }
