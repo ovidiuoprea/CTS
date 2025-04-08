@@ -9,7 +9,7 @@ public abstract class AMedicalDevice implements MedicalDevice {
 
     @Override
     public void collectData() {
-        System.out.println(deviceName + " is collecting data.");
+        System.out.println(this.getClass().getSimpleName() + " " + this.deviceName + " is collecting data.");
     }
 
     @Override
