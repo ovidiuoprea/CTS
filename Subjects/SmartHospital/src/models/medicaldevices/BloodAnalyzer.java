@@ -3,7 +3,7 @@ package models.medicaldevices;
 import interfaces.AMedicalDevice;
 
 public class BloodAnalyzer extends AMedicalDevice {
-    public BloodAnalyzer(String deviceName) {
+    BloodAnalyzer(String deviceName) {
         super(deviceName);
     }
 
