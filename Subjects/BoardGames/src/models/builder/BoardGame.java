@@ -1,8 +1,11 @@
 package models.builder;
 
+import models.factory.AComponent;
+
+import java.util.ArrayList;
 import java.util.List;
 
-public class BoardGame {
+public class BoardGame implements Cloneable {
     String title;
     int maxPlayers;
     int averageLength;
@@ -10,6 +13,8 @@ public class BoardGame {
     boolean hasAIOpponent;
     boolean hasExtensions;
     boolean hasExtraGameModes;
+
+    List<AComponent> newComponents;
 
     public final int EXTENSIONS_MINIMUM_PLAYERS_COUNT = 6;
 
@@ -32,6 +37,10 @@ public class BoardGame {
         this.hasExtraGameModes = hasExtraGameModes;
     }
 
+    public void addNewComponent(String component) {
+        components.add(component);
+    }
+
     @Override
     public String toString() {
         return "BoardGame{" +
@@ -43,5 +52,16 @@ public class BoardGame {
                 ", hasExtensions=" + hasExtensions +
                 ", hasExtraGameModes=" + hasExtraGameModes +
                 '}';
+    }
+
+    @Override
+    public Object clone() throws CloneNotSupportedException {
+        BoardGame cloned = (BoardGame) super.clone();
+        List<String> clonedComponents = new ArrayList<>();
+        for(String component : components) {
+            clonedComponents.add(component);
+        }
+        cloned.components = clonedComponents;
+        return cloned;
     }
 }
