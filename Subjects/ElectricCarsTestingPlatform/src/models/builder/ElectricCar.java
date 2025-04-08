@@ -1,6 +1,6 @@
 package models.builder;
 
-public class ElectricCar {
+public class ElectricCar implements Cloneable {
     private String batteryType;
     private int range;
     private int numberOfEngines;
@@ -39,5 +39,10 @@ public class ElectricCar {
                 ", hasAutoPilot=" + hasAutoPilot +
                 ", hasAdaptiveSuspension=" + hasAdaptiveSuspension +
                 '}';
+    }
+
+    @Override
+    public Object clone() throws CloneNotSupportedException {
+        return super.clone();
     }
 }
