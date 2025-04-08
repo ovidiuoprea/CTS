@@ -26,18 +26,22 @@ public abstract class ABiologicalSample implements IBiologicalSample, Cloneable{
         return incubationTemperature;
     }
 
+    public void setIncubationTemperature(double incubationTemperature) {
+        this.incubationTemperature = incubationTemperature;
+    }
+
     @Override
     public void processSample() {
-        System.out.println("Processing sample " + geneticCode + "at " + incubationTemperature + "degrees...");
+        System.out.println("Processing sample " + sampleType + " " + geneticCode + " at " + incubationTemperature + " degrees...");
     }
 
     @Override
     public void printReport() {
-        System.out.println("Printing report for " + geneticCode + "at " + incubationTemperature + "degrees...");
+        System.out.println("Printing report for " + sampleType + " " + geneticCode + " at " + incubationTemperature + " degrees...");
     }
 
     @Override
-    protected Object clone() throws CloneNotSupportedException {
+    public Object clone() throws CloneNotSupportedException {
         return super.clone();
     }
 }

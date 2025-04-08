@@ -33,7 +33,7 @@ public class Bacteria extends ABiologicalSample {
     }
 
     @Override
-    protected Object clone() throws CloneNotSupportedException {
+    public Object clone() throws CloneNotSupportedException {
         return super.clone();
     }
 }
