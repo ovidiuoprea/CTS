@@ -1,8 +1,10 @@
+import enums.ElectricCarType;
 import enums.ServiceType;
 import enums.VehicleSensorType;
 import models.ServiceManager;
 import models.builder.ElectricCar;
 import models.builder.ElectricCarBuilder;
+import models.builder.ElectricCarPrototypeFactory;
 import models.factory.*;
 
 public class Main {
@@ -47,5 +49,27 @@ public class Main {
         BatteryTensionSensor batteryTensionSensor1 = (BatteryTensionSensor) vehicleSensorFactory.getVehicleSensor(VehicleSensorType.BATTERY_TENSION_SENSOR, 12);
         System.out.println("Battery tension sensor: " + batteryTensionSensor1.readSensorValue());
 
+
+        try {
+            ElectricCar teslaCopy = (ElectricCar) tesla.clone();
+
+            System.out.println("Tesla: " + tesla);
+            System.out.println("Tesla copy: " + teslaCopy);
+
+            ElectricCar performance = new ElectricCarPrototypeFactory().getElectricCar(ElectricCarType.PERFORMANCE);
+            ElectricCar city = new ElectricCarPrototypeFactory().getElectricCar(ElectricCarType.CITY);
+
+            ElectricCar performance1 = new ElectricCarPrototypeFactory().getElectricCar(ElectricCarType.PERFORMANCE);
+            ElectricCar performance2 = new ElectricCarPrototypeFactory().getElectricCar(ElectricCarType.PERFORMANCE);
+            ElectricCar performance3 = new ElectricCarPrototypeFactory().getElectricCar(ElectricCarType.PERFORMANCE);
+
+
+            System.out.println("Performance car: " + performance);
+            System.out.println("City car & others: " + city + performance1 + performance2 + performance3);
+
+
+        } catch (CloneNotSupportedException e) {
+            System.out.println("CloneNotSupportedException: " + e.getMessage());
+        }
     }
 }
